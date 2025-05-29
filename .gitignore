@@ -1,2 +1,4 @@
 /METCS601
 /starter_template.html
+
+*.zip // Ignore all zip files
