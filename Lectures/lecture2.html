@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> METCS 601 - Lecture 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        dl {
+            white-space: pre-line;
+            /* Preserve whitespace */
+        }
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript Basics</h1>
+    <h2> Script Tag </h2>
+    <div>
+        <span>
+            The script tag is used to include JavaScript code in an HTML document. It can be placed in the head or body
+            section of the document. The code can be inline or linked to an external file using the src attribute.
+        </span>
+        <dl>
+            <dt>Variables</dt>
+            <dd>
+                <code>var x = 5;</code> We dont want to use this anymore, it is outdated.
+                <code>let y = 10;</code> This is the new way to declare variables.
+                <code>const z = 15;</code> This is used for constants that should not change.
+            </dd>
+            <dt>Inline Script</dt>
+            <dd>
+                <code>&lt;script&gt; console.log("Hello, World!"); &lt;/script&gt;</code>
+            </dd>
+            <dt>External Script</dt>
+            <dd>
+                <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>
+            </dd>
+
+        </dl>
+    </div>
+
+    <h2>JavaScript Control Structure</h2>
+    <div>
+        <h3>Iterative Statements</h3>
+        <dl>
+            <dt>For Loop</dt>
+            <dd>
+                The for loop is used to execute a block of code a specific number of times. It consists of three parts:
+                initialization, condition, and increment/decrement.
+                <code>
+                    for (let i = 0; i < 5; i++) {
+                        console.log(i);
+                    }
+                </code>
+            </dd>
+
+            <dt>While Loop</dt>
+            <dd>
+                <code>
+                    while (condition) {
+                        // code to be executed
+                    }
+                </code>
+            </dd>
+            <dt>Do-While Loop</dt>
+            <dd>
+                The do-while loop is similar to the while loop, but it guarantees that the code block will be executed
+                at
+                least once before checking the condition.
+                <code>
+                    do {
+                        // code to be executed
+                    } while (condition);
+                </code>
+            </dd>
+        </dl>
+
+        <code>
+
+        </code>
+
+
+    </div>
+
+    <h2>Functions</h2>
+    <div>
+        <dl>
+            <dt> Arguments</dt>
+            <dd>
+                Access argument list with <code>arguments</code> keyword.
+                <code>
+                        function myFunction() {
+                            console.log(arguments[0]); // Access the first argument
+                        }
+                    </code>
+            </dd>
+            <dd>
+                function adder(...values) means that the values parameter is always a non empty array.
+            </dd>
+            <dt>Closure</dt>
+            <dd> A function within a function</dd>
+        </dl>
+    </div>
+
+    <h2>Events</h2>
+    <div>
+        Key Event Properties:
+        <ol>
+            <li>target: the element that triggered the event</li>
+            <li>cancelable: tells you if an event can be canceled or not. Read-only</li>
+            <li>type: tells you the name of an event, like 'click', 'submit', 'mouseover' </li>
+        </ol>
+        <h3>Custom Events</h3>
+        <dl>
+            <dt>Creating Custom Events</dt>
+            <dd>
+                You can create custom events using the <code>CustomEvent</code> constructor.
+                <code>
+                    const myEvent = new CustomEvent('myEvent', { detail: { key: 'value' } });
+                </code>
+                <script>
+                    const myEvent = new CustomEvent('myEvent', { detail: { key: 'value' } });
+                    document.addEventListener('myEvent', function (e) {
+                        console.log('Custom event triggered:', e.detail);
+                    });
+                </script>
+            </dd>
+            <dt>Dispatching Custom Events</dt>
+            <dd>
+                You can dispatch custom events using the <code>dispatchEvent</code> method.
+                <code>
+                    document.dispatchEvent(myEvent);
+                </code>
+            </dd>
+            <script>
+                window.addEventListener("DOMContentLoaded", () => { // This is case sensitive, so it must be in all caps    
+                    const h1Element = document.getElementById("game");
+                    h1Element.addEventListener("click", () => {
+                        alert("You clicked on the h1 element!");
+                    });
+                })
+            </script>
+            <h1 name="clickText" id="game">Click on me</h1>
+            <h1 onmouseout="alert('Hi')" style="border: 20px; border-color: black;">This triggers an event when you
+                mouse over and then out of this text</h1>
+    </div>
+</body>
+</html>
