@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Labs - Week 2 Splash</title>
     <style>
+        #splash {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 10%;
+        }
 
+        #content {
+            display: none;
+            padding: 20px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 0;
+        }
     </style>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
@@ -19,20 +35,21 @@
 
                 let content = document.getElementById('content');
                 content.style.display = 'block'; // Show the main content
-            }, 500)
+            }, 3000)
         });
     </script>
 </head>
+
 <body>
-    <div id="splash" style="margin: auto; display: flex; justify-content: center;">
-        <h1>Welcome to Class Labs</h1>
-        <br>
-        <br>
-        <img src="https://media.tenor.com/xovttc29RPkAAAAM/queenslander.gif" alt="Class Labs Logo"
-            style="width: 100px; height: auto;">
+    <div id="splash">
+        <figure>
+            <img style="max-width: 80%;" src="https://media1.tenor.com/m/O9FbOqrJdaUAAAAd/windows-xp-loading-screen.gif" alt="Class Labs Logo">
+            <figcaption style=" text-align: center; font-size: 1.5em; font-weight: bold;">Loading hidden treasure...
+            </figcaption>
+        </figure>
     </div>
     <div id="content" style="display: none;">
-        <h2>Week 2 Splash</h2>
+        <h1>Week 2 Splash</h1>
         <p>This is the content that will be displayed after the splash screen.</p>
     </div>
 
