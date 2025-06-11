@@ -1,4 +1,4 @@
-import { calculateBMI, getBMICategory } from './bmi.js';
+import { calculateBMI, getBMICategory } from './bmiModule.js';
 
 const unitSelect = document.getElementById('unit');
 const metricFields = document.getElementById('metricFields');

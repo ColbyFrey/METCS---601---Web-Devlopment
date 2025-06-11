@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colby Frey - Week 3 - BMI Calculator</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" >
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
@@ -16,26 +16,26 @@
         <h2>Homework Week 3 - Colby Frey - MET CS 601 </h2>
         <form id="bmiForm">
             <label for="unit">Choose unit:</label>
-            <select id="unit" selected="imperial">
+            <select id="unit">
                 <option value="imperial">Imperial (ft, in, lbs)</option>
                 <option value="metric">Metric (cm, kg)</option>
             </select>
             <div id="imperialFields" class="unit-fields">
                 <div class="row">
                     <div class="col-25">
-                        <label for="number">Height (ft):</label>
+                        <label for="feet">Height (ft):</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" id="feet" min="0" />
+                        <input type="number" id="feet" min="0" >
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-25">
-                        <label for="number">Height (in):</label>
+                        <label for="inches">Height (in):</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" id="inches" min="0" />
+                        <input type="number" id="inches" min="0" >
                     </div>
                 </div>
 
@@ -44,15 +44,15 @@
                         <label for="lbs">Weight (lbs):</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" id="lbs" min="0" />
+                        <input type="number" id="lbs" min="0" >
                     </div>
                 </div>
             </div>
             <div id="metricFields" class="unit-fields hidden">
                 <label for="cm">Height (cm):</label>
-                <input type="number" id="cm" min="0" />
+                <input type="number" id="cm" min="0" >
                 <label for="kg">Weight (kg):</label>
-                <input type="number" id="kg" min="0" />
+                <input type="number" id="kg" min="0" >
             </div>
 
 
