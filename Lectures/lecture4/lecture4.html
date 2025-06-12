@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> METCS 601 - Lecture 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <h1>Lecture 4</h1>
+    <div>
+        <h2>Topics</h2>
+        <ul>
+            <li><a href="#audioVideo">Audio/Video in HTML</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+            <li> <a href="#flexbox">Flexbox API </a> </li>
+            <li> <a href="#cssGrids">CSS Grid</a></li>
+            <li> <a href="#pseudoClasses">Pseudo classes and elements</a></li>
+        </ul>
+    </div>
+    <div>
+        <div>
+        <h3>Homework - Planning poker assignment</h3>
+        
+
+        </div>
+        <h3> Midterm Stuff</h3>
+        <ul>
+            <li> Selectors (Attributes, Class,Id)</li>
+            <li> Descendent selector: something like div div:first-of-type will apply to the first child div in a div</li>
+        </ul>
+    </div>
+    <div id="audioVideo">
+        <h3>Audio Video</h3>
+        <ul>
+            <li>
+                <h4>Codecs</h4>
+                <p>Codec is a software that encodes and decodes digital data. It is used to compress and decompress
+                    audio and video files.</p>
+            </li>
+            <li>
+                <h4>Video Attributes</h4>
+                <ul>
+                    <li>autoplay</li>
+                    <li>controls</li>
+                    <li>loop</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Audio Attributes</h4>
+                <ul>
+                    <li>autoplay</li>
+                    <li>controls</li>
+                    <li>loop</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="bootstrap">
+        <h3>Bootstrap</h3>
+        Link tag on CDN's, attributes integrity and corssorigin added to CDN links to ensure integrity
+        <ul>
+            <li>Containers
+                <p>
+                    The most basic element in Bootstrap. Can be nested but has 3 main types:
+                <ul>
+                    <li>Container - uses the max-width at each defined breakpoint </li>
+                    <li>Container-breakpoint - uses 100% width, till {breakpoint} is reached.</li>
+                    <li>Container-fluid - uses “width: 100%” at each breakpoint, all the time</li>
+                    </p>
+            </li>
+
+        </ul>
+
+        <h4>Rows & Columns</h4>
+        <ul>
+            <li>Rows - &lt;div class="row" &gt;</li>
+            <li>Columns - &lt;div class="col" &gt;</li>
+            <li>Columns can be nested inside rows</li>
+            <li>Columns can be resized using the grid system</li>
+
+        </ul>
+        <h4>Images</h4>
+        <ul>
+            <li>img-fluid: applies 100% max with and height audio so it scales with parent width</li>
+            <li>img-thumbnail: applies a border and padding to the image</li>
+            <li>img-rounded: applies a border-radius to the image</li>
+        </ul>
+    </div>
+
+    <div id="flexbox">
+        <h3>Flexbox</h3>
+        <p>You must use a parent element for your items inside the flex container</p>
+        <h4>Flex Direction</h4>
+        <p>flex-direction, controls if you want a row or a column</p>
+        <ul>
+            <li>column vs column-reverse: reverse your column elements</li>
+        </ul>
+        <h4>Flex Wrap</h4>
+        <p>The default is to not wrap any items</p>
+        <p>flex-wrap, controls if you want your items to wrap or not</p>
+        <ul>
+            <li>nowrap: items will not wrap</li>
+            <li>wrap: items will wrap to the next line</li>
+            <li>wrap-reverse: items will wrap to the next line in reverse order</li>
+
+        </ul>
+        <h4>flex-flow> </h4>
+        <p>Shorthand for flex-direction and flex-wrap</p>
+
+        <h4>Flex shorthand</h4>
+        <p>Shorthand property to set individual </p>
+        <ul>
+            <li>flex-grow: how much the item will grow relative to the other items</li>
+            <li>flex-shrink: how much the item will shrink relative to the other items</li>
+            <li>flex-basis: the initial size of the item before it grows or shrinks</li>
+    </div>
+
+    <div id="cssGrids">
+        <h3>CSS Grids</h3>
+        <p>Flexbox is pretty one-dimensional items, good for ui-components </p>
+        <p>CSS Grids are a powerful layout system that allows you to create complex layouts with ease.</p>
+        <p>By default grids are a <span style="font-weight: bold;">single</span> column. Each child will get its own row!</p>
+        <p>If the parents have a fixed height the children will be equally sized</p>
+        <h4>Grid Container</h4>
+        <ul>
+            <li>grid-template-columns: defines the columns of the grid</li>
+            <li>grid-template-rows: defines the rows of the grid</li>
+            <li>grid-gap: defines the gap between the grid items</li>
+            <li>grid-area: defines the area of the grid item</li>
+        </ul>
+
+        <h4>Media Queries</h4>
+        <p>Media queries are used to apply styles based on the screen size or device type.</p>
+        <p>They are rules for specific screen sizes, when the rule inside the @media() tag hits it will run</p>
+        <ul>
+            <li>@media (max-width: 600px) { ... } - applies styles when the screen width is less than 600px</li>
+            <li>@media (min-width: 600px) { ... } - applies styles when the screen width is greater than or equal to 600px</li>
+            <li>@media (orientation: portrait) { ... } - applies styles when the device is in portrait mode</li>
+        </ul>
+
+        <h4>Grid-gap (Old) vs gap (new)</h4>
+        <p>grid-gap is the old way of defining the gap between grid items, gap is the new way.</p>
+        <p>gap is a shorthand property that sets both row-gap and column-gap at the same time.</p>
+        
+        <h4>grid-auto-flow</h4>
+        <p>grid-auto-flow is a property that controls how the grid items are placed in the grid.</p>
+        <ul>
+            <li>row: items are placed in rows</li>
+            <li>column: items are placed in columns</li>
+            <li>dense: items are placed in the grid as soon as there is space available</li>
+        </ul>
+    </div>
+
+    <div id="pseudoClasses">
+        <h3>Pseudo Classes and Elements</h3>
+        <p>Pseudo classes are used to style elements based on their state or position in the document.</p>
+
+        <ul>
+            <li>:not() </li>
+            <li>::first-letter || ::first-line - Selects the first letter or line in the text </li>
+            <li>::before || ::after - Used to insert content before or after an element</li>
+            <code>
+                p::before {
+                    content: "Hello ";
+                }
+            </code>
+            <li>::selection - allows you to style selected text on a page</li>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
