@@ -1,0 +1,193 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 2rem;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    border-radius: 6px;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.4rem;
+}
+
+textarea {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    max-width: 100%;
+    box-shadow: 1px 1px 1px #999;
+}
+
+/* ========================
+   Buttons
+======================== */
+button {
+    margin-top: 1rem;
+    height: 3rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 0.5rem 0;
+}
+
+
+/* ========================
+   Layout & Containers
+======================== */
+.form-view {
+    background-color: white;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.flexbox-form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexbox-row {
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-row-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.name-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* ========================
+   Member Cards
+======================== */
+.member-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    max-width: 600px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.remove-member-btn {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ========================
+   Inputs & Selects
+======================== */
+.vote-dropdown {
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* ========================
+   Game Display Boxes
+======================== */
+.current-story-display,
+.game-details-box {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* ========================
+   Progress Bar
+======================== */
+.progress-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid lightgray;
+    font-weight: bold;
+}
+
+.active-step {
+    border-bottom: 3px solid #007bff;
+    color: #007bff;
+}
+

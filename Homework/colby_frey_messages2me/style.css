@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 100%;
+  margin: 1.5rem auto 5rem auto;
+  padding: 0 1rem;
+}
+
+textarea {
+  width: 75%;
+  max-width: 400px;
+  height: 100px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+#messageList {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-left: 0;
+  list-style: none;
+  margin: 0 auto 2rem auto;
+  max-width: 400px;
+}
+
+li {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  margin-right: 0.5rem;
+}
+
+.bottom-controls {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.action-btn {
+  background-color: #2f855a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#addBtn {
+  left: 50%;
+  background-color: #d32f2f;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+  .container {
+    max-width: 400px;
+    margin-top: 2.5rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  ul#messageList,
+  .bottom-controls {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  textarea {
+    height: 120px;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button.action-btn {
+    padding: 0.8rem 1.5rem;
+  }
+  #addBtn {
+    width: 64px;
+    height: 64px;
+    font-size: 2.3rem;
+  }
+  #messageList,
+  .bottom-controls {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  textarea {
+    height: 140px;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .action-btn {
+    padding: 1rem 2rem;
+  }
+  #addBtn {
+    width: 72px;
+    height: 72px;
+    font-size: 2.6rem;
+  }
+  #messageList,
+  .bottom-controls {
+    max-width: 700px;
+  }
+}
