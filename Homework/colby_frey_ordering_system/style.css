@@ -1,0 +1,279 @@
+/*Base Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  background: #fff;
+  color: #222;
+}
+
+.a-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.a-link:hover {
+    color:#222; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+/* Top Tab Bar Items*/
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.tabItem {
+  background-color: #555;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  flex-grow: 1;
+  transition: background-color 0.3s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabItem:hover {
+  background-color: #777;
+}
+
+.active-tab {
+  background-color: #004466 !important;
+  color: white;
+}
+
+/* Hide tab content by default */
+.tabContent {
+  display: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 0 8px 8px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #f9f9f9;
+}
+
+.tabContent:not(.hidden) {
+  display: block;
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 6px;
+  text-align: left;
+}
+
+th {
+  background-color: #e0f0ff;
+  color: #004466;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background-color: #e6f2ff;
+}
+
+/* Buttons */
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button[type="submit"] {
+  background-color: #004466;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #006699;
+}
+
+button[type="reset"] {
+  background-color: #cc0000;
+  color: white;
+}
+
+button[type="reset"]:hover {
+  background-color: #ff3333;
+}
+
+/* Inputs */
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 14px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #004466;
+  outline: none;
+}
+
+/* Form labels */
+
+label {
+  font-weight: 600;
+  color: #004466;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.orderStatusIcon{
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+ 
+/* Edit Orders Table buttons */
+
+#editOrdersTable img.edit-btn,
+#editOrdersTable img.ready-btn,
+#editOrdersTable img.delete-btn {
+  cursor: pointer;
+  width: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+
+#editOrdersTable img.edit-btn:hover {
+  opacity: 0.7;
+}
+
+#editOrdersTable img.delete-btn:hover,
+#editOrdersTable img.ready-btn:hover {
+  opacity: 0.7;
+}
+
+
+/* No Orders Text */
+.no-orders-text {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+
+/* Responsive Adjustments */
+
+/* Small tablets and up */
+@media (min-width: 480px) {
+  body {
+    margin: 20px auto;
+    max-width: 420px;
+  }
+
+  .tab-container {
+    max-width: 420px;
+    margin: 0 auto 20px auto;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+/* Medium devices - tablets and small desktops */
+@media (min-width: 768px) {
+  body {
+    max-width: 720px;
+  }
+
+  .tab-container {
+    max-width: 720px;
+  }
+
+  section {
+    padding: 25px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 1.1rem;
+    padding: 10px 14px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1024px) {
+  body {
+    max-width: 960px;
+  }
+
+  .tab-container {
+    max-width: 960px;
+  }
+
+  section {
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
