@@ -5,7 +5,8 @@ const ORDERS_KEY = "orders";
 
 function saveOrders(orders: Order[]) {
   localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
-}
+} 
+
 
 function populateCreateOrderForm() {
   const orderIdInput = document.getElementById("orderId") as HTMLInputElement | null;
